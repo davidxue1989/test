@@ -212,7 +212,6 @@ def training_loop(dataloader_X, dataloader_Y, test_dataloader_X, test_dataloader
             iter_Y = iter(dataloader_Y)
 
         images_X, labels_X = iter_X.next()
-        print(labels_X)
         images_X, labels_X = utils.to_var(images_X), utils.to_var(labels_X).long().squeeze()
 
         images_Y, labels_Y = iter_Y.next()
