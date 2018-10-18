@@ -40,14 +40,19 @@ import utils
 from data_loader import get_emoji_loader
 from models import CycleGenerator, DCDiscriminator
 
+print('wtf')
 
 SEED = 11
+
+print('wtf2')
 
 # Set the random seed manually for reproducibility.
 np.random.seed(SEED)
 torch.manual_seed(SEED)
 if torch.cuda.is_available():
     torch.cuda.manual_seed(SEED)
+
+print('wtf3')
 
 
 def print_models(G_XtoY, G_YtoX, D_X, D_Y):
@@ -324,16 +329,24 @@ def main(opts):
     """Loads the data, creates checkpoint and sample directories, and starts the training loop.
     """
 
+    print('here')
+
     # Create train and test dataloaders for images from the two domains X and Y
     dataloader_X, test_dataloader_X = get_emoji_loader(emoji_type=opts.X, opts=opts)
     dataloader_Y, test_dataloader_Y = get_emoji_loader(emoji_type=opts.Y, opts=opts)
+
+    print('here2')
 
     # Create checkpoint and sample directories
     utils.create_dir(opts.checkpoint_dir)
     utils.create_dir(opts.sample_dir)
 
+    print('here3')
+
     # Start training
     training_loop(dataloader_X, dataloader_Y, test_dataloader_X, test_dataloader_Y, opts)
+
+    print('here4')
 
 
 def print_opts(opts):
