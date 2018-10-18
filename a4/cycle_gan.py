@@ -22,37 +22,31 @@ import pdb
 import pickle
 import argparse
 
-import warnings
-warnings.filterwarnings("ignore")
+# import warnings
+# warnings.filterwarnings("ignore")
 
-# Torch imports
-import torch
-import torch.nn as nn
-import torch.optim as optim
+# # Torch imports
+# import torch
+# import torch.nn as nn
+# import torch.optim as optim
 
-# Numpy & Scipy imports
-import numpy as np
-import scipy
-import scipy.misc
+# # Numpy & Scipy imports
+# import numpy as np
+# import scipy
+# import scipy.misc
 
-# Local imports
-import utils
-from data_loader import get_emoji_loader
-from models import CycleGenerator, DCDiscriminator
+# # Local imports
+# import utils
+# from data_loader import get_emoji_loader
+# from models import CycleGenerator, DCDiscriminator
 
-print('wtf')
+# SEED = 11
 
-SEED = 11
-
-print('wtf2')
-
-# Set the random seed manually for reproducibility.
-np.random.seed(SEED)
-torch.manual_seed(SEED)
-if torch.cuda.is_available():
-    torch.cuda.manual_seed(SEED)
-
-print('wtf3')
+# # Set the random seed manually for reproducibility.
+# np.random.seed(SEED)
+# torch.manual_seed(SEED)
+# if torch.cuda.is_available():
+#     torch.cuda.manual_seed(SEED)
 
 
 # def print_models(G_XtoY, G_YtoX, D_X, D_Y):
