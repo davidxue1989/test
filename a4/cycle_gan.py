@@ -40,14 +40,19 @@ import utils
 from data_loader import get_emoji_loader
 from models import CycleGenerator, DCDiscriminator
 
+print('wtf')
 
 SEED = 11
+
+print('wtf2')
 
 # Set the random seed manually for reproducibility.
 np.random.seed(SEED)
 torch.manual_seed(SEED)
 if torch.cuda.is_available():
     torch.cuda.manual_seed(SEED)
+
+print('wtf3')
 
 
 # def print_models(G_XtoY, G_YtoX, D_X, D_Y):
